@@ -11,8 +11,8 @@ classDiagram
         -SendRequestAsync~T~(string, object) Task~T~
     }
 
-    TossAPIService --> "HttpClient" : Uses
-    TossAPIService --> "IConfiguration" : Uses
+    TossAPIService --> HttpClient : Uses
+    TossAPIService --> IConfiguration : Uses
 
     TossAPIService : 결제생성Async(결제생성Request)
     TossAPIService : 결제승인Async(결제승인Request)
@@ -28,4 +28,5 @@ classDiagram
     }
 
     note right of TossAPIService : SendRequestAsync is a private method\n that handles all HTTP requests.
+
 ```
