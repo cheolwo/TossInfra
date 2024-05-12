@@ -26,7 +26,4 @@ classDiagram
     class IConfiguration {
         <<external>>
     }
-
-    note right of TossAPIService : SendRequestAsync is a private method\n that handles all HTTP requests.
-
 ```
