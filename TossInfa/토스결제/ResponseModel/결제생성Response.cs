@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TossInfa.ResponseModel
+namespace TossInfa.토스결제.ResponseModel
 {
     public class 결제생성Response
     {

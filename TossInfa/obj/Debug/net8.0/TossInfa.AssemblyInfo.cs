@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TossInfa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71067c2d533dd78c3212dfdbadd4d63f47e81316")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23b9b197e13e140905dcec4b884dcc2b8bef32cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("TossInfa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TossInfa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

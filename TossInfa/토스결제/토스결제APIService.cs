@@ -1,19 +1,16 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.Text.Json;
-using TossInfa.RequestModel;
-using TossInfa.ResponseModel;
+﻿using System.Text.Json;
+using TossInfa.토스결제.RequestModel;
+using TossInfa.토스결제.ResponseModel;
 
-namespace TossInfa
+namespace TossInfa.토스결제
 {
-    public class TossAPIService
+    public class 토스결제APIService
     {
         private readonly HttpClient _httpClient;
-        private readonly IConfiguration _configuration;
 
-        public TossAPIService(HttpClient httpClient, IConfiguration configuration)
+        public 토스결제APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _configuration = configuration;
         }
 
         private async Task<T> SendRequestAsync<T>(string url, object request)
@@ -23,8 +20,6 @@ namespace TossInfa
             {
                 Content = new StringContent(jsonRequest, System.Text.Encoding.UTF8, "application/json")
             };
-            string apiKey = _configuration["Toss:ApiKey"];
-            requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiKey);
 
             var response = await _httpClient.SendAsync(requestMessage);
             if (response.IsSuccessStatusCode)
@@ -41,11 +36,10 @@ namespace TossInfa
 
         public Task<결제생성Response> 결제생성Async(결제생성Request request) => SendRequestAsync<결제생성Response>("https://pay.toss.im/api/v2/payments", request);
 
-        public Task<HttpResponseMessage> 결제승인Async(결제승인Request request) => SendRequestAsync<HttpResponseMessage>("https://pay.toss.im/api/v2/execute", request);
+        public Task<HttpResponseMessage> 결제승인Async(결제승인Request request) => SendRequestAsync<HttpResponseMessage>("https://p ay.toss.im/api/v2/execute", request);
 
         public Task<HttpResponseMessage> 결제환불Async(결제환불Request request) => SendRequestAsync<HttpResponseMessage>("https://pay.toss.im/api/v2/refunds", request);
 
         public Task<결제상태확인Response> 결제상태확인Async(결제상태확인Request request) => SendRequestAsync<결제상태확인Response>("https://pay.toss.im/api/v2/status", request);
     }
-
 }
