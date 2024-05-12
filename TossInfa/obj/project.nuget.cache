@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9aGqhA3+WbEHe9q7naqOEaisMIgQ7Sn5aLxJYUUcc66zfvVccNt/Za+Ui8vZv0td8kYNEi4YfJDz7r2t/UnPiA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\TossInfra\\TossInfa\\TossInfa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
